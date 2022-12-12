@@ -2,14 +2,21 @@
 using namespace std;
 /*
 Input: 5
+__1
+_333
+55555
+_333
+__1
 
-----1
----333
---55555
--111*111
---55555
----333
-----1
+
+Input: 7
+___1
+__333
+_55555
+7777777
+_55555
+__333
+___1
 */
 
 int main()
@@ -44,7 +51,7 @@ int main()
   cout << endl;
 
   int tempSp = 1;
-  int theNextVariableToBeUsed = n - 2;
+  int v = n - 2;
 
   for (int r = n / 2; r > 0; r--)
   {
@@ -53,13 +60,13 @@ int main()
       cout << "_";
     }
 
-    for (int h = theNextVariableToBeUsed; h > 0; h--)
+    for (int h = v; h > 0; h--)
     {
-      cout << theNextVariableToBeUsed;
+      cout << v;
     }
     cout << endl;
     tempSp++;
-    theNextVariableToBeUsed--;
-    theNextVariableToBeUsed--;
+    v--;
+    v--;
   }
 }
